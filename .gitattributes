@@ -1,2 +1,11 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+*.exe
+*.dll
+*.so
+*.dylib
+
+*.test
+
+*.out
+
+
+db/

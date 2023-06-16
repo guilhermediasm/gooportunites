@@ -1,7 +1,20 @@
 package main
 
-import "github.com/guilhermediasm/gooportunites/router"
+import (
+	"github.com/guilhermediasm/gooportunites/config"
+	"github.com/guilhermediasm/gooportunites/router"
+)
+
+var (
+	logger config.Logger
+)
 
 func main() {
+	logger = *config.GetLogger("main")
+	err := config.Init()
+	if err != nil {
+		logger.Errorf("config initialization error: %v", err)
+		return
+	}
 	router.Initialize()
 }

@@ -2,7 +2,7 @@
 
 APP_NAME=gopportunities
 
-default: run
+default: run-with-docs
 
 run:
 	@go run main.go
